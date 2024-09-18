@@ -1,101 +1,96 @@
-import Image from "next/image";
+import FlyoutMenu, { NavigationMenuDemo } from '@/components/NavigatinMenu';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+
+import { ThemeComponent } from '@/components/theme/ThemeComponent';
+import AboutUs from '@/components/AboutUs';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <header
+        className="relative w-full h-[90vh] bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("../assets/bg.jpg")' }}
+      >
+        <div>
+          <div className="  items-center py-6 px-2 container mx-auto">
+            <div className="flex justify-between items-center">
+              <Image
+                src="/assets/logo.svg"
+                width={100}
+                height={100}
+                alt="no image "
+              />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+              <div className="flex gap-x-10 font-medium text-md uppercase items-center">
+                <p>HomePage</p>
+                <p>Features</p>
+                <FlyoutMenu />
+                <p>How It Works</p>
+                <p>Services</p>
+                <p>Blog</p>
+              </div>
+              <div>
+                <ThemeComponent />
+              </div>
+            </div>
+          </div>
         </div>
+        <div className="pt-[130px]">
+          <div className="flex justify-center items-center ">
+            <div className="space-y-4 w-1/2">
+              <p className="font-medium text-xl tracking-wide ">
+                {' '}
+                Custom Software Development
+              </p>
+              <div className="font-bold text-5xl  text-gray-500 tracking-wide space-y-4">
+                <p>specialize in providing</p>
+                <p>custom software</p>
+                <p>solutions unique needs</p>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus <br /> nec ullamcorper mattis, pulvinar dapibus
+                leo.
+              </p>
+              <div className="flex gap-x-10 items-center">
+                <button className="bg-[#0466C8] rounded-md p-3 text-white">
+                  GET STARTED
+                </button>
+                <p className="uppercase font-medium">see project</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main className="container mx-auto">
+        <AboutUs />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, hic
+        quisquam consectetur laboriosam omnis dolore voluptatem necessitatibus
+        modi facere? Ullam dolorum repellendus facere perferendis voluptatibus
+        vero minima nam excepturi, aut explicabo, a dolores, nesciunt cupiditate
+        eligendi molestias accusamus commodi laboriosam ab quae soluta
+        architecto quasi saepe. Reprehenderit molestiae, quod quasi repellendus
+        eveniet deserunt possimus? Obcaecati, debitis totam. Repellat alias
+        aspernatur eveniet nesciunt cupiditate cum a, hic qui? Tenetur vitae
+        consequatur facere, sint tempore, hic expedita ducimus in nobis maiores
+        totam deleniti ratione enim minus itaque dignissimos. Distinctio quod
+        aspernatur modi architecto perferendis et tempore a vitae cumque, rerum
+        repellendus beatae asperiores aliquid delectus eveniet totam, quae
+        minima perspiciatis velit similique eaque blanditiis ad sed! Eligendi
+        eos odio at praesentium obcaecati? Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Ex expedita, non error aperiam quas quidem
+        quam impedit unde voluptatem obcaecati perspiciatis libero enim quia
+        assumenda! Nisi pariatur facilis qui ullam nihil similique, at corporis
+        eum? Iure atque blanditiis a? Nam sit nemo voluptates quibusdam
+        consequuntur debitis alias, assumenda deleniti deserunt neque aperiam
+        quia. Nisi aperiam reiciendis dolor sequi quis similique quas
+        consequatur voluptates voluptatibus, facilis facere! Debitis soluta
+        laborum quam, aliquam, culpa vero rerum dolores totam eaque blanditiis
+        quae quaerat omnis repellendus sunt corrupti cum quod. Ad quam nihil
+        excepturi quidem magni labore rem dolor laborum officia. Amet, expedita!
+        Repellendus!
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
