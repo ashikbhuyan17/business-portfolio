@@ -1,5 +1,5 @@
-'use client';
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 
 const FlyoutMenu = () => {
   const [open, setOpen] = useState(false);
@@ -22,7 +22,7 @@ const FlyoutMenu = () => {
             setOpen(!open);
           }}
         >
-          <span className="sr-only">Show submenu for "Flyout Menu"</span>
+          <span className="sr-only">Show submenu for Flyout Menu</span>
           <svg
             className="w-3 h-3 fill-slate-500"
             xmlns="http://www.w3.org/2000/svg"

@@ -1,9 +1,9 @@
 // pages/index.js
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <div className=" min-h-[900px] bg-white rounded-lg">
+    <div className=" min-h-[700px] bg-white rounded-lg mt-10">
       <div className="w-full  p-6 ">
         <div className="flex flex-col lg:flex-row items-center justify-evenly">
           {/* Left Section */}
@@ -70,9 +70,8 @@ export default function AboutUs() {
             <div className="mt-6 flex space-x-4">
               <p className="border-r-4 h-14 border-blue-500 rounded-md"></p>
               <blockquote className="text-xl italic text-gray-800">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                leo."
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
               </blockquote>
             </div>
 
@@ -88,9 +87,9 @@ export default function AboutUs() {
                     <g
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
                       color="#3B82F6"
                     >
                       <path d="m18.952 8.607l2.51-.153C19.662 3.704 14.497 1 9.46 2.344C4.096 3.778.91 9.262 2.343 14.595s6.945 8.494 12.31 7.061A10.04 10.04 0 0 0 22 13.485" />
@@ -99,7 +98,7 @@ export default function AboutUs() {
                   </svg>
                 </p>
                 <p className="text-xl font-semibold">
-                  {' '}
+                  {" "}
                   We Offer Unlimited Revision
                 </p>
               </div>
