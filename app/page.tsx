@@ -1,12 +1,14 @@
-"use client";
-import FlyoutMenu from "@/components/NavigatinMenu";
-import Image from "next/image";
+'use client';
+import FlyoutMenu from '@/components/NavigatinMenu';
+import Image from 'next/image';
 
-import { ThemeComponent } from "@/components/theme/ThemeComponent";
-import AboutUs from "@/components/AboutUs";
-import { useEffect, useState } from "react";
-import styles from "../components/Navbar.module.css";
-import WhoWeAre from "@/components/WhoWeAre";
+import { ThemeComponent } from '@/components/theme/ThemeComponent';
+import AboutUs from '@/components/AboutUs';
+import { useEffect, useState } from 'react';
+import styles from '../components/Navbar.module.css';
+import WhoWeAre from '@/components/WhoWeAre';
+import Rating from '@/components/Rating';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [isSticky, setIsSticky] = useState(false);
@@ -19,10 +21,10 @@ export default function Home() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   return (
@@ -38,10 +40,10 @@ export default function Home() {
           style={{
             backgroundImage:
               "linear-gradient(90deg, rgba(0, 35, 102, 0.8) 50%, rgba(255, 255, 255, 0) 100%), url('/assets/software-developer-at-office.jpg') ",
-            backgroundPosition: "center ",
+            backgroundPosition: 'center ',
           }}
         ></div>
-        <div className={` ${isSticky ? styles.sticky : ""}`}>
+        <div className={` ${isSticky ? styles.sticky : ''}`}>
           <div className="items-center py-2 px-2 container mx-auto">
             <div className="flex justify-between items-center text-white relative">
               <Image
@@ -70,7 +72,7 @@ export default function Home() {
           <div className="flex justify-center items-center ">
             <div className="space-y-4 lg:w-1/2 ">
               <p className="font-medium text-xl tracking-wide ">
-                {" "}
+                {' '}
                 Custom Software Development
               </p>
               <div className="font-bold  text-4xl lg:text-5xl   text-white tracking-wide md:space-y-4">
@@ -87,15 +89,13 @@ export default function Home() {
                 <button className="bg-[#0466C8] rounded-md p-3 text-white">
                   GET STARTED
                 </button>
-                <p className="uppercase font-medium">see project {"->"}</p>
+                <p className="uppercase font-medium">see project {'->'}</p>
               </div>
             </div>
           </div>
         </div>
       </header>
-      <main className="container mx-auto ">
-        <AboutUs />
-      </main>
+      <main className="container mx-auto ">{/* <AboutUs /> */}</main>
       <section className="p-8 bg-gray-100 rounded-lg shadow-md min-h-[500px]">
         <div className="container mx-auto ">
           <WhoWeAre />
@@ -205,7 +205,7 @@ export default function Home() {
             style={{
               backgroundImage:
                 "linear-gradient(90deg, rgba(0, 35, 102, 0.8) 50%, rgba(255, 255, 255, 0) 100%), url('/assets/theres-our-solution-.jpg')",
-              backgroundPosition: "center",
+              backgroundPosition: 'center',
             }}
           ></div>
 
@@ -290,7 +290,7 @@ export default function Home() {
                     <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
                       <div
                         className="bg-blue-600 h-2 rounded-full"
-                        style={{ width: "95%" }}
+                        style={{ width: '95%' }}
                       ></div>
                     </div>
 
@@ -301,7 +301,7 @@ export default function Home() {
                     <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
                       <div
                         className="bg-blue-600 h-2 rounded-full"
-                        style={{ width: "99%" }}
+                        style={{ width: '99%' }}
                       ></div>
                     </div>
                   </div>
@@ -323,11 +323,11 @@ export default function Home() {
         <div className="relative min-h-[600px]  w-full">
           {/* Background image and gradient overlay */}
           <div
-            className="absolute inset-0 bg-cover bg-no-repeat"
+            className="bg-cover bg-no-repeat"
             style={{
               backgroundImage:
                 "linear-gradient(90deg, rgba(0, 35, 102, 0.8) 50%, rgba(255, 255, 255, 0) 100%), url('/assets/theres-our-solution-.jpg')",
-              backgroundPosition: "center",
+              backgroundPosition: 'center',
             }}
           >
             <div className="py-8 px-4  lg:py-16 lg:px-6">
@@ -401,7 +401,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Team size:{" "}
+                        Team size:{' '}
                         <span className="font-semibold">1 developer</span>
                       </span>
                     </li>
@@ -420,7 +420,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Premium support:{" "}
+                        Premium support:{' '}
                         <span className="font-semibold">6 months</span>
                       </span>
                     </li>
@@ -439,7 +439,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Free updates:{" "}
+                        Free updates:{' '}
                         <span className="font-semibold">6 months</span>
                       </span>
                     </li>
@@ -512,7 +512,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Team size:{" "}
+                        Team size:{' '}
                         <span className="font-semibold">10 developers</span>
                       </span>
                     </li>
@@ -531,7 +531,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Premium support:{" "}
+                        Premium support:{' '}
                         <span className="font-semibold">24 months</span>
                       </span>
                     </li>
@@ -550,7 +550,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Free updates:{" "}
+                        Free updates:{' '}
                         <span className="font-semibold">24 months</span>
                       </span>
                     </li>
@@ -624,7 +624,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Team size:{" "}
+                        Team size:{' '}
                         <span className="font-semibold">100+ developers</span>
                       </span>
                     </li>
@@ -643,7 +643,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Premium support:{" "}
+                        Premium support:{' '}
                         <span className="font-semibold">36 months</span>
                       </span>
                     </li>
@@ -662,7 +662,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Free updates:{" "}
+                        Free updates:{' '}
                         <span className="font-semibold">36 months</span>
                       </span>
                     </li>
@@ -679,6 +679,99 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section>
+        <div className=" bg-gray-100 py-12 relative">
+          <div className="container mx-auto px-4 ">
+            <p className="text-lg mb-4 tracking-widest text-blue-900 text-center uppercase font-semibold">
+              Client Feedback
+            </p>
+            <h1 className="text-center text-4xl font-bold text-blue-900 mb-12">
+              We Provide Our Clients With The <br />
+              Most Innovative And Effective Solutions
+            </h1>
+
+            {/* Feedback Cards */}
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
+              {/* First Feedback Card */}
+              <div className="bg-[#001845] space-y-7 text-white rounded-lg p-6 shadow-lg w-full lg:w-1/2">
+                <div className="flex items-center mb-4">
+                  <Rating rating={4} />
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                  leo.
+                </p>
+                <div className="flex items-center">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="John Doe"
+                    className="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <p className="font-bold">Mr. John Doe</p>
+                    <p className="text-sm">Business Owner</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[#001845] space-y-7 text-white rounded-lg p-6 shadow-lg w-full lg:w-1/2">
+                <div className="flex items-center mb-4">
+                  <Rating rating={4} />
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                  leo.
+                </p>
+                <div className="flex items-center">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="John Doe"
+                    className="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <p className="font-bold">Mr. John Doe</p>
+                    <p className="text-sm">Business Owner</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Second Feedback Card */}
+              <div className="bg-[#001845] space-y-7 text-white rounded-lg p-6 shadow-lg w-full lg:w-1/2">
+                <div className="flex items-center mb-4">
+                  <Rating rating={5} />
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                  leo.
+                </p>
+                <div className="flex items-center">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="John Doe"
+                    className="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <p className="font-bold">Mr. John Doe</p>
+                    <p className="text-sm">Business Owner</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Pagination dots */}
+            <div className="flex justify-center mt-8">
+              <span className="h-2 w-6 bg-blue-900 rounded-full inline-block mx-1"></span>
+              <span className="h-2 w-2 bg-gray-400 rounded-full inline-block mx-1"></span>
+              <span className="h-2 w-2 bg-gray-400 rounded-full inline-block mx-1"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
