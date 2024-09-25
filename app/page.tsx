@@ -2,7 +2,7 @@
 import FlyoutMenu from '@/components/NavigatinMenu';
 import Image from 'next/image';
 
-import { ThemeComponent } from '@/components/theme/ThemeComponent';
+// import { ThemeComponent } from '@/components/theme/ThemeComponent';
 import AboutUs from '@/components/AboutUs';
 import { useEffect, useState } from 'react';
 import styles from '../components/Navbar.module.css';
