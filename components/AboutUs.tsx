@@ -1,5 +1,5 @@
 // pages/index.js
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function AboutUs() {
   return (
@@ -8,7 +8,7 @@ export default function AboutUs() {
         <div className="flex flex-col lg:flex-row items-center justify-evenly">
           {/* Left Section */}
           <div className="flex flex-col  items-center md:items-start w-full lg:w-1/2 mb-6 md:mb-0">
-            <div className="relative ">
+            <div className="relative max-md:w-[400px] max-md:p-3">
               <Image
                 src="/assets/programming.jpg"
                 alt="Developer Image"
@@ -98,7 +98,7 @@ export default function AboutUs() {
                   </svg>
                 </p>
                 <p className="text-xl font-semibold">
-                  {" "}
+                  {' '}
                   We Offer Unlimited Revision
                 </p>
               </div>

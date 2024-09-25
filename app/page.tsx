@@ -95,7 +95,9 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="container mx-auto ">{/* <AboutUs /> */}</main>
+      <main className="container mx-auto ">
+        <AboutUs />{' '}
+      </main>
       <section className="p-8 bg-gray-100 rounded-lg shadow-md min-h-[500px]">
         <div className="container mx-auto ">
           <WhoWeAre />
