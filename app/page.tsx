@@ -1,14 +1,14 @@
-'use client';
-import FlyoutMenu from '@/components/NavigatinMenu';
-import Image from 'next/image';
+"use client";
+import FlyoutMenu, { NavigationMenuDemo } from "@/components/NavigatinMenu";
+import Image from "next/image";
 
 // import { ThemeComponent } from '@/components/theme/ThemeComponent';
-import AboutUs from '@/components/AboutUs';
-import { useEffect, useState } from 'react';
-import styles from '../components/Navbar.module.css';
-import WhoWeAre from '@/components/WhoWeAre';
-import Rating from '@/components/Rating';
-import Footer from '@/components/Footer';
+import AboutUs from "@/components/AboutUs";
+import { useEffect, useState } from "react";
+import styles from "../components/Navbar.module.css";
+import WhoWeAre from "@/components/WhoWeAre";
+import Rating from "@/components/Rating";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [isSticky, setIsSticky] = useState(false);
@@ -21,10 +21,10 @@ export default function Home() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
@@ -40,10 +40,10 @@ export default function Home() {
           style={{
             backgroundImage:
               "linear-gradient(90deg, rgba(0, 35, 102, 0.8) 50%, rgba(255, 255, 255, 0) 100%), url('/assets/software-developer-at-office.jpg') ",
-            backgroundPosition: 'center ',
+            backgroundPosition: "center ",
           }}
         ></div>
-        <div className={` ${isSticky ? styles.sticky : ''}`}>
+        <div className={` ${isSticky ? styles.sticky : ""}`}>
           <div className="items-center py-2 px-2 container mx-auto">
             <div className="flex justify-between items-center text-white relative">
               <Image
@@ -55,12 +55,12 @@ export default function Home() {
               />
 
               <div className="flex gap-x-10 font-medium text-md  uppercase items-center max-lg:hidden">
-                <p>HomePage</p>
-                <p>Features</p>
-                <FlyoutMenu />
-                <p>How It Works</p>
-                <p>Services</p>
-                <p>Blog</p>
+                <p>Home</p>
+                <p>About</p>
+                {/* <FlyoutMenu /> */}
+                <NavigationMenuDemo />
+                <p>pricing plan </p>
+                <p>contact </p>
               </div>
               <div className="max-lg:hidden">
                 {/* <ThemeComponent /> */}
@@ -151,7 +151,7 @@ export default function Home() {
           <div className="flex justify-center items-center w-full">
             <div className="space-y-4 lg:w-1/2 ">
               <p className="font-medium text-xl tracking-wide ">
-                {' '}
+                {" "}
                 Custom Software Development
               </p>
               <div className="font-bold  text-4xl lg:text-5xl   text-white tracking-wide md:space-y-4">
@@ -168,14 +168,14 @@ export default function Home() {
                 <button className="bg-[#0466C8] rounded-md p-3 text-white">
                   GET STARTED
                 </button>
-                <p className="uppercase font-medium">see project {'->'}</p>
+                <p className="uppercase font-medium">see project {"->"}</p>
               </div>
             </div>
           </div>
         </div>
       </header>
       <main className="container mx-auto ">
-        <AboutUs />{' '}
+        <AboutUs />{" "}
       </main>
       <section className="p-8 bg-gray-100 rounded-lg shadow-md min-h-[500px]">
         <div className="container mx-auto ">
@@ -278,19 +278,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <div className="relative min-h-[700px] w-full">
-          {/* Background image and gradient overlay */}
           <div
             className="absolute inset-0 bg-cover bg-no-repeat"
             style={{
               backgroundImage:
                 "linear-gradient(90deg, rgba(0, 35, 102, 0.8) 50%, rgba(255, 255, 255, 0) 100%), url('/assets/theres-our-solution-.jpg')",
-              backgroundPosition: 'center',
+              backgroundPosition: "center",
             }}
           ></div>
 
-          {/* Content */}
           <div className="container mx-auto ">
             <div className="relative z-10 min-h-[700px] flex items-center px-8 lg:px-16 ">
               <div className="text-white max-w-lg">
@@ -315,7 +313,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section>
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 ">
@@ -371,7 +369,7 @@ export default function Home() {
                     <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
                       <div
                         className="bg-blue-600 h-2 rounded-full"
-                        style={{ width: '95%' }}
+                        style={{ width: "95%" }}
                       ></div>
                     </div>
 
@@ -382,7 +380,7 @@ export default function Home() {
                     <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
                       <div
                         className="bg-blue-600 h-2 rounded-full"
-                        style={{ width: '99%' }}
+                        style={{ width: "99%" }}
                       ></div>
                     </div>
                   </div>
@@ -400,15 +398,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      {/* =============================Pricing Plan======================= */}
+
+      {/* <section>
         <div className="relative min-h-[600px]  w-full">
-          {/* Background image and gradient overlay */}
           <div
             className="bg-cover bg-no-repeat"
             style={{
               backgroundImage:
                 "linear-gradient(90deg, rgba(0, 35, 102, 0.8) 50%, rgba(255, 255, 255, 0) 100%), url('/assets/theres-our-solution-.jpg')",
-              backgroundPosition: 'center',
+              backgroundPosition: "center",
             }}
           >
             <div className="py-8 px-4  lg:py-16 lg:px-6">
@@ -421,7 +420,6 @@ export default function Home() {
                 </h2>
               </div>
               <div className="space-y-8 grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-                {/* Pricing Card */}
                 <div className=" flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-8 ">
                   <h3 className="mb-4 text-2xl font-semibold">Starter</h3>
                   <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
@@ -433,10 +431,8 @@ export default function Home() {
                       /month
                     </span>
                   </div>
-                  {/* List */}
                   <ul role="list" className="mb-8 space-y-4 text-left">
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -452,7 +448,6 @@ export default function Home() {
                       <span>Individual configuration</span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -468,7 +463,6 @@ export default function Home() {
                       <span>No setup, or hidden fees</span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -482,12 +476,11 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Team size:{' '}
+                        Team size:{" "}
                         <span className="font-semibold">1 developer</span>
                       </span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -501,12 +494,11 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Premium support:{' '}
+                        Premium support:{" "}
                         <span className="font-semibold">6 months</span>
                       </span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -520,7 +512,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Free updates:{' '}
+                        Free updates:{" "}
                         <span className="font-semibold">6 months</span>
                       </span>
                     </li>
@@ -532,7 +524,6 @@ export default function Home() {
                     Get started
                   </a>
                 </div>
-                {/* Pricing Card */}
                 <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-8 ">
                   <h3 className="mb-4 text-2xl font-semibold">Company</h3>
                   <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
@@ -544,10 +535,9 @@ export default function Home() {
                       /month
                     </span>
                   </div>
-                  {/* List */}
+
                   <ul role="list" className="mb-8 space-y-4 text-left">
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -563,7 +553,6 @@ export default function Home() {
                       <span>Individual configuration</span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -579,7 +568,6 @@ export default function Home() {
                       <span>No setup, or hidden fees</span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -593,12 +581,11 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Team size:{' '}
+                        Team size:{" "}
                         <span className="font-semibold">10 developers</span>
                       </span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -612,12 +599,11 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Premium support:{' '}
+                        Premium support:{" "}
                         <span className="font-semibold">24 months</span>
                       </span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -631,7 +617,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Free updates:{' '}
+                        Free updates:{" "}
                         <span className="font-semibold">24 months</span>
                       </span>
                     </li>
@@ -643,7 +629,7 @@ export default function Home() {
                     Get started
                   </a>
                 </div>
-                {/* Pricing Card */}
+
                 <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow xl:p-8 ">
                   <h3 className="mb-4 text-2xl font-semibold">Enterprise</h3>
                   <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
@@ -656,10 +642,9 @@ export default function Home() {
                       /month
                     </span>
                   </div>
-                  {/* List */}
+
                   <ul role="list" className="mb-8 space-y-4 text-left">
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -675,7 +660,6 @@ export default function Home() {
                       <span>Individual configuration</span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -691,7 +675,6 @@ export default function Home() {
                       <span>No setup, or hidden fees</span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -705,12 +688,11 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Team size:{' '}
+                        Team size:{" "}
                         <span className="font-semibold">100+ developers</span>
                       </span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -724,12 +706,11 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Premium support:{' '}
+                        Premium support:{" "}
                         <span className="font-semibold">36 months</span>
                       </span>
                     </li>
                     <li className="flex items-center space-x-3">
-                      {/* Icon */}
                       <svg
                         className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                         fill="currentColor"
@@ -743,7 +724,7 @@ export default function Home() {
                         />
                       </svg>
                       <span>
-                        Free updates:{' '}
+                        Free updates:{" "}
                         <span className="font-semibold">36 months</span>
                       </span>
                     </li>
@@ -759,7 +740,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section>
         <div className=" bg-gray-100 py-12 relative">
