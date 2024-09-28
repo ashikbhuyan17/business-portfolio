@@ -1,5 +1,5 @@
 "use client";
-import FlyoutMenu, { NavigationMenuDemo } from "@/components/NavigatinMenu";
+import { NavigationMenuDemo } from "@/components/NavigatinMenu";
 import Image from "next/image";
 
 // import { ThemeComponent } from '@/components/theme/ThemeComponent';
@@ -7,8 +7,9 @@ import AboutUs from "@/components/AboutUs";
 import { useEffect, useState } from "react";
 import styles from "../components/Navbar.module.css";
 import WhoWeAre from "@/components/WhoWeAre";
-import Rating from "@/components/Rating";
+// import Rating from "@/components/Rating";
 import Footer from "@/components/Footer";
+import { CarouselPlugin } from "@/components/Carousel";
 
 export default function Home() {
   const [isSticky, setIsSticky] = useState(false);
@@ -753,9 +754,7 @@ export default function Home() {
               Most Innovative And Effective Solutions
             </h1>
 
-            {/* Feedback Cards */}
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
-              {/* First Feedback Card */}
+            {/* <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
               <div className="bg-[#001845] space-y-7 text-white rounded-lg p-6 shadow-lg w-full lg:w-1/2">
                 <div className="flex items-center mb-4">
                   <Rating rating={4} />
@@ -799,7 +798,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Second Feedback Card */}
               <div className="bg-[#001845] space-y-7 text-white rounded-lg p-6 shadow-lg w-full lg:w-1/2">
                 <div className="flex items-center mb-4">
                   <Rating rating={5} />
@@ -821,17 +819,21 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            {/* Pagination dots */}
-            <div className="flex justify-center mt-8">
+            {/* <div className="flex justify-center mt-8">
               <span className="h-2 w-6 bg-blue-900 rounded-full inline-block mx-1"></span>
               <span className="h-2 w-2 bg-gray-400 rounded-full inline-block mx-1"></span>
               <span className="h-2 w-2 bg-gray-400 rounded-full inline-block mx-1"></span>
-            </div>
+            </div> */}
+            <CarouselPlugin />
           </div>
         </div>
       </section>
+      {/* 
+      <section className="container mx-auto">
+        <CarouselPlugin />
+      </section> */}
 
       <Footer />
     </div>
