@@ -3,11 +3,11 @@ import Image from 'next/image';
 
 export default function AboutUs() {
   return (
-    <div className=" min-h-[700px] bg-white rounded-lg mt-10">
+    <div className=" md:min-h-[700px]  rounded-lg md:mt-10">
       <div className="w-full  p-6 ">
         <div className="flex flex-col lg:flex-row items-center justify-evenly">
           {/* Left Section */}
-          <div className="flex flex-col  items-center md:items-start w-full lg:w-1/2 mb-6 md:mb-0">
+          <div className="flex flex-col  items-center md:items-start w-full lg:w-1/2 mb-6 md:mb-0 max-md:hidden">
             <div className="relative max-md:w-[400px] max-md:p-3">
               <Image
                 src="/assets/programming.jpg"
@@ -58,7 +58,7 @@ export default function AboutUs() {
           </div>
 
           {/* Right Section */}
-          <div className="lg:w-1/2  max-lg:mt-[100px]">
+          <div className="lg:w-1/2  lg:mt-[100px]">
             <p className="tracking-wide text-lg font-semibold mb-3">About Us</p>
             <h1 className="text-4xl font-bold text-gray-900">
               Welcome To Our Custom Software Development Service For Any Needs
