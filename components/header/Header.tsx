@@ -1,10 +1,10 @@
-'use client';
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
-import { NavigationMenuDemo } from '@/components/NavigatinMenu';
-import styles from '../Navbar.module.css';
-import ResponsiveSidebar from '../ResponsiveSidebar';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { NavigationMenuDemo } from "@/components/NavigatinMenu";
+import styles from "../Navbar.module.css";
+import ResponsiveSidebar from "../ResponsiveSidebar";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -17,10 +17,10 @@ export default function Header() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
@@ -37,7 +37,7 @@ export default function Header() {
             backgroundImage:
               "linear-gradient(90deg, rgb(240 177 72 / 80%) 50%, rgb(226 190 31 / 0%) 100%), url('/assets/MainImage.png')",
             // "url('/assets/MainImage.png')",
-            backgroundPosition: 'center ',
+            backgroundPosition: "center ",
           }}
         ></div>
         <div
@@ -95,7 +95,7 @@ export default function Header() {
           <div className="flex justify-center items-center w-full">
             <div className="space-y-4 lg:w-1/2 ">
               <p className="font-medium text-xl tracking-wide ">
-                {' '}
+                {" "}
                 Custom Software Development
               </p>
               <div className="font-bold  text-4xl lg:text-5xl    tracking-wide md:space-y-4">
@@ -117,12 +117,58 @@ export default function Header() {
                 >
                   GET STARTED
                 </Link>
-                <p className="uppercase font-medium">see project {'->'}</p>
+                <p className="uppercase font-medium">see project {"->"}</p>
               </div>
             </div>
           </div>
         </div>
       </header>
+      <section className="container mx-auto flex justify-center items-center max-lg:hidden lg:mb-[50px]">
+        <div className="absolute m-[-30px] lg:w-11/12 xl:w-8/12 bg-white shadow-md h-[120px] rounded-xl">
+          <div className="flex justify-between w-full h-full">
+            <div className="border-r h-full flex justify-center items-center gap-x-4 p-5">
+              <Image
+                src="/assets/EfficientDeliveries.svg"
+                width={60}
+                height={60}
+                alt="no image"
+                // color="white"
+              />
+              <p className="text-xl font-semibold">Efficient Deliveries</p>
+            </div>
+            <div className=" border-r h-full flex justify-center items-center gap-x-4 p-5">
+              <Image
+                src="/assets/TailoredSolutions.svg"
+                width={60}
+                height={60}
+                alt="no image"
+                // color="white"
+              />
+              <p className="text-xl font-semibold">Tailored Solutions</p>
+            </div>
+            <div className="border-r h-full flex justify-center items-center gap-x-4 p-5">
+              <Image
+                src="/assets/SeamlessOperations.svg"
+                width={60}
+                height={60}
+                alt="no image"
+                // color="white"
+              />
+              <p className="text-xl font-semibold">Seamless Operations</p>
+            </div>
+            <div className=" h-full flex justify-center items-center gap-x-4 p-5">
+              <Image
+                src="/assets/CustomerClearance.svg"
+                width={60}
+                height={60}
+                alt="no image"
+                // color="white"
+              />
+              <p className="text-xl font-semibold">Customer Clearance</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
