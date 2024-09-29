@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { NavigationMenuDemo } from '@/components/NavigatinMenu';
 import styles from '../Navbar.module.css';
+import ResponsiveSidebar from '../ResponsiveSidebar';
 
 export default function MainHeader() {
   const [isSticky, setIsSticky] = useState(false);
@@ -52,6 +53,9 @@ export default function MainHeader() {
                   // color="white"
                 />
               </Link>
+              <div className="block lg:hidden">
+                <ResponsiveSidebar />
+              </div>
 
               <div className="flex gap-x-10 font-medium text-md  uppercase items-center max-lg:hidden">
                 <Link href="/">Home</Link>

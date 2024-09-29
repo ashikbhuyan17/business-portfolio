@@ -1,15 +1,15 @@
-import * as React from "react";
-import Autoplay from "embla-carousel-autoplay";
+import * as React from 'react';
+import Autoplay from 'embla-carousel-autoplay';
 
-import { Card } from "@/components/ui/card";
+import { Card } from '@/components/ui/card';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import Rating from "./Rating";
+} from '@/components/ui/carousel';
+import Rating from './Rating';
 
 export function CarouselPlugin() {
   const plugin = React.useRef(
@@ -22,13 +22,16 @@ export function CarouselPlugin() {
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
       opts={{
-        align: "start",
+        align: 'start',
       }}
-      className="w-full max-w-full"
+      className="max-md:w-11/12 md:max-w-full"
     >
       <CarouselContent>
         {Array.from({ length: 10 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            key={index}
+            className="sm:basis-1/2 md:basis-1/3 lg:basis-1/3"
+          >
             <div className="p-1">
               <Card>
                 <div className="bg-[#001845] space-y-7 text-white rounded-lg p-6 shadow-lg w-full ">

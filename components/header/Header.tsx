@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { NavigationMenuDemo } from '@/components/NavigatinMenu';
 import styles from '../Navbar.module.css';
+import ResponsiveSidebar from '../ResponsiveSidebar';
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -53,6 +54,9 @@ export default function Header() {
                   // color="white"
                 />
               </Link>
+              <div className="block lg:hidden">
+                <ResponsiveSidebar />
+              </div>
 
               <div className="flex gap-x-10 font-medium text-md  uppercase items-center max-lg:hidden">
                 <Link href="/">Home</Link>
@@ -119,52 +123,6 @@ export default function Header() {
           </div>
         </div>
       </header>
-      <section className="container mx-auto flex justify-center items-center max-lg:hidden lg:mb-[50px]">
-        <div className="absolute m-[-30px] lg:w-11/12 xl:w-8/12 bg-white shadow-md h-[120px] rounded-xl">
-          <div className="flex justify-between w-full h-full">
-            <div className="border-r h-full flex justify-center items-center gap-x-4 p-5">
-              <Image
-                src="/assets/EfficientDeliveries.svg"
-                width={60}
-                height={60}
-                alt="no image"
-                // color="white"
-              />
-              <p className="text-xl font-semibold">Efficient Deliveries</p>
-            </div>
-            <div className=" border-r h-full flex justify-center items-center gap-x-4 p-5">
-              <Image
-                src="/assets/TailoredSolutions.svg"
-                width={60}
-                height={60}
-                alt="no image"
-                // color="white"
-              />
-              <p className="text-xl font-semibold">Tailored Solutions</p>
-            </div>
-            <div className="border-r h-full flex justify-center items-center gap-x-4 p-5">
-              <Image
-                src="/assets/SeamlessOperations.svg"
-                width={60}
-                height={60}
-                alt="no image"
-                // color="white"
-              />
-              <p className="text-xl font-semibold">Seamless Operations</p>
-            </div>
-            <div className=" h-full flex justify-center items-center gap-x-4 p-5">
-              <Image
-                src="/assets/CustomerClearance.svg"
-                width={60}
-                height={60}
-                alt="no image"
-                // color="white"
-              />
-              <p className="text-xl font-semibold">Customer Clearance</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
