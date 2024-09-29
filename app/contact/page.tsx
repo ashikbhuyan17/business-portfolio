@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 export default function page() {
   return (
     <>
-      <section className="my-10 container mx-auto">
+      <section className="my-[100px] container mx-auto">
         <div
           id="map"
           className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
@@ -52,7 +52,7 @@ export default function page() {
                       className="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
                       id="exampleFormControlTextarea1"
                       rows={3}
-                      defaultValue={""}
+                      defaultValue={''}
                     />
                     <label
                       htmlFor="exampleFormControlTextarea1"

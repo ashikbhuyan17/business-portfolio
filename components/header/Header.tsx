@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <>
       <header
-        className="relative w-full h-[90vh] md:h-[80vh] lg:h-[100vh] "
+        className="relative w-full h-[90vh] md:h-[80vh] lg:h-[90vh] "
         // style={{
         //   backgroundImage: " url('/assets/software-developer-at-office.jpg')",
         // }}
@@ -44,21 +44,23 @@ export default function Header() {
         >
           <div className="items-center py-2 px-2 container mx-auto ">
             <div className="flex justify-between items-center relative">
-              <Image
-                src="/assets/icons/01 agri tech.png"
-                width={50}
-                height={50}
-                alt="no image"
-                // color="white"
-              />
+              <Link href="/">
+                <Image
+                  src="/assets/icons/01 agri tech.png"
+                  width={50}
+                  height={50}
+                  alt="no image"
+                  // color="white"
+                />
+              </Link>
 
               <div className="flex gap-x-10 font-medium text-md  uppercase items-center max-lg:hidden">
                 <Link href="/">Home</Link>
-                <p>About</p>
+                <Link href="/">About</Link>
                 {/* <FlyoutMenu /> */}
                 <NavigationMenuDemo />
-                <p>pricing plan </p>
-                <p>contact </p>
+                {/* <Link href="/">pricing plan </Link> */}
+                <Link href="/contact">contact </Link>
               </div>
               <div className="max-lg:hidden">
                 <div className="flex items-center space-x-4">
@@ -85,7 +87,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <div className="max-md:p-2  relative h-full flex justify-center items-center">
+        <div className="max-md:p-5  relative h-full flex justify-center items-center">
           <div className="flex justify-center items-center w-full">
             <div className="space-y-4 lg:w-1/2 ">
               <p className="font-medium text-xl tracking-wide ">
@@ -117,6 +119,52 @@ export default function Header() {
           </div>
         </div>
       </header>
+      <section className="container mx-auto flex justify-center items-center max-lg:hidden lg:mb-[50px]">
+        <div className="absolute m-[-30px] lg:w-11/12 xl:w-8/12 bg-white shadow-md h-[120px] rounded-xl">
+          <div className="flex justify-between w-full h-full">
+            <div className="border-r h-full flex justify-center items-center gap-x-4 p-5">
+              <Image
+                src="/assets/EfficientDeliveries.svg"
+                width={60}
+                height={60}
+                alt="no image"
+                // color="white"
+              />
+              <p className="text-xl font-semibold">Efficient Deliveries</p>
+            </div>
+            <div className=" border-r h-full flex justify-center items-center gap-x-4 p-5">
+              <Image
+                src="/assets/TailoredSolutions.svg"
+                width={60}
+                height={60}
+                alt="no image"
+                // color="white"
+              />
+              <p className="text-xl font-semibold">Tailored Solutions</p>
+            </div>
+            <div className="border-r h-full flex justify-center items-center gap-x-4 p-5">
+              <Image
+                src="/assets/SeamlessOperations.svg"
+                width={60}
+                height={60}
+                alt="no image"
+                // color="white"
+              />
+              <p className="text-xl font-semibold">Seamless Operations</p>
+            </div>
+            <div className=" h-full flex justify-center items-center gap-x-4 p-5">
+              <Image
+                src="/assets/CustomerClearance.svg"
+                width={60}
+                height={60}
+                alt="no image"
+                // color="white"
+              />
+              <p className="text-xl font-semibold">Customer Clearance</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

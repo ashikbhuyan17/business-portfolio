@@ -25,7 +25,7 @@ export default function MainHeader() {
   return (
     <>
       <header
-        className="relative w-full  bg-[#001845] "
+        className="relative w-full "
         // style={{
         //   backgroundImage: " url('/assets/software-developer-at-office.jpg')",
         // }}
@@ -43,21 +43,23 @@ export default function MainHeader() {
         >
           <div className="items-center py-2 px-2 container mx-auto">
             <div className="flex justify-between items-center relative">
-              <Image
-                src="/assets/logo.svg"
-                width={100}
-                height={100}
-                alt="no image"
-                color="white"
-              />
+              <Link href="/">
+                <Image
+                  src="/assets/icons/01 agri tech.png"
+                  width={50}
+                  height={50}
+                  alt="no image"
+                  // color="white"
+                />
+              </Link>
 
               <div className="flex gap-x-10 font-medium text-md  uppercase items-center max-lg:hidden">
                 <Link href="/">Home</Link>
-                <p>About</p>
+                <Link href="/">About</Link>
                 {/* <FlyoutMenu /> */}
                 <NavigationMenuDemo />
-                <p>pricing plan </p>
-                <p>contact </p>
+                {/* <Link href="/">pricing plan </Link> */}
+                <Link href="/contact">contact </Link>
               </div>
               <div className="max-lg:hidden">
                 {/* <ThemeComponent /> */}
@@ -76,7 +78,7 @@ export default function MainHeader() {
                   {/* Get a Quote Button */}
                   <Link
                     href="/contact"
-                    className=" bg-blue-600 hover:bg-blue-700 font-semibold py-2 px-4 rounded-lg"
+                    className=" bg-[#faa72a]  shadow-md hover:bg-[#fbd293] text-white font-semibold py-2 px-4 rounded-full"
                   >
                     Get a Quote
                   </Link>
