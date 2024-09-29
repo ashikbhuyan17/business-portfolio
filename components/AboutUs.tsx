@@ -5,12 +5,12 @@ export default function AboutUs() {
   return (
     <div className=" md:min-h-[700px]  rounded-lg md:mt-10">
       <div className="w-full  p-6 ">
-        <div className="flex flex-col lg:flex-row items-center justify-evenly">
+        <div className="flex flex-col lg:flex-row items-center justify-evenly gap-x-10">
           {/* Left Section */}
-          <div className="flex flex-col  items-center md:items-start w-full lg:w-1/2 mb-6 md:mb-0 max-md:hidden">
+          <div className="flex flex-col  items-center md:items-start w-full lg:w-1/2 mb-6 md:mb-20 max-md:hidden">
             <div className="relative max-md:w-[400px] max-md:p-3">
               <Image
-                src="/assets/programming.jpg"
+                src="/assets/about-1.png"
                 alt="Developer Image"
                 width={400}
                 height={400}
@@ -23,7 +23,7 @@ export default function AboutUs() {
                   className="rounded-md h-[500px] w-[300px]"
                 /> */}
                 <Image
-                  src="/assets/male-programmer-working.jpg"
+                  src="/assets/about-2.png"
                   alt="Developer Image"
                   width={250}
                   height={250}
@@ -60,22 +60,25 @@ export default function AboutUs() {
           {/* Right Section */}
           <div className="lg:w-1/2  lg:mt-[100px]">
             <p className="tracking-wide text-lg font-semibold mb-3">About Us</p>
-            <h1 className="text-4xl font-bold text-gray-900">
-              Welcome To Our Custom Software Development Service For Any Needs
+            <h1 className="text-2xl font-bold text-gray-900 lg:mb-8">
+              {'" Beyond Innovation , Into the Extraordinary "'}
             </h1>
-            <p className="mt-4 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
+
             <div className="mt-6 flex space-x-4">
-              <p className="border-r-4 h-14 border-blue-500 rounded-md"></p>
-              <blockquote className="text-xl italic text-gray-800">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              <p className="border-r-4  border-[#F8AE3D] rounded-md"></p>
+              <blockquote className="text-xl italic text-gray-800 leading-relaxed">
+                At AesthiTech, we are a dynamic and forward-thinking technology
+                startup based in Dhaka, Bangladesh. Founded by a team of
+                passionate and highly skilled professionals, our collective
+                experience spans a wide range of industries, including software
+                development, IoT automation, AI, and UI/UX design. Each member
+                of our team brings a wealth of expertise and a proven track
+                record of delivering successful projects, giving us the ability
+                to tackle even the most complex challenges.
               </blockquote>
             </div>
 
-            <div className=" mt-6 space-x-6">
+            {/* <div className=" mt-6 space-x-6">
               <div className="text-gray-600 flex items-center space-x-3">
                 <p>
                   <svg
@@ -106,7 +109,7 @@ export default function AboutUs() {
                 <p className="text-3xl font-bold text-blue-500">1,235+</p>
                 <p className=" text-gray-500 font-medium">Give Best Feedback</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

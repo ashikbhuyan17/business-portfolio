@@ -1,19 +1,22 @@
-"use client";
-import Image from "next/image";
+'use client';
+import Image from 'next/image';
 
 // import { ThemeComponent } from '@/components/theme/ThemeComponent';
-import AboutUs from "@/components/AboutUs";
+import AboutUs from '@/components/AboutUs';
 
-import WhoWeAre from "@/components/WhoWeAre";
+import WhoWeAre from '@/components/WhoWeAre';
 // import Rating from "@/components/Rating";
-import Footer from "@/components/Footer";
-import { CarouselPlugin } from "@/components/Carousel";
+import Footer from '@/components/Footer';
+import { CarouselPlugin } from '@/components/Carousel';
+import { Suspense } from 'react';
 
 export default function Home() {
   return (
     <div>
       <main className="container mx-auto ">
-        <AboutUs />{" "}
+        <Suspense fallback={<>loading...................</>}>
+          <AboutUs />{' '}
+        </Suspense>
       </main>
       <section className="p-8 bg-gray-100 rounded-lg shadow-md min-h-[500px]">
         <div className="container mx-auto ">
@@ -207,7 +210,7 @@ export default function Home() {
                     <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
                       <div
                         className="bg-blue-600 h-2 rounded-full"
-                        style={{ width: "95%" }}
+                        style={{ width: '95%' }}
                       ></div>
                     </div>
 
@@ -218,7 +221,7 @@ export default function Home() {
                     <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
                       <div
                         className="bg-blue-600 h-2 rounded-full"
-                        style={{ width: "99%" }}
+                        style={{ width: '99%' }}
                       ></div>
                     </div>
                   </div>

@@ -1,9 +1,9 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { NavigationMenuDemo } from "@/components/NavigatinMenu";
-import styles from "../Navbar.module.css";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import { NavigationMenuDemo } from '@/components/NavigatinMenu';
+import styles from '../Navbar.module.css';
 
 export default function MainHeader() {
   const [isSticky, setIsSticky] = useState(false);
@@ -16,10 +16,10 @@ export default function MainHeader() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   return (
@@ -38,9 +38,11 @@ export default function MainHeader() {
             backgroundPosition: "center ",
           }}
         ></div> */}
-        <div className={` ${isSticky ? styles.sticky : ""}`}>
+        <div
+          className={` ${isSticky ? styles.sticky : styles.stickyFirstShow} `}
+        >
           <div className="items-center py-2 px-2 container mx-auto">
-            <div className="flex justify-between items-center text-white relative">
+            <div className="flex justify-between items-center relative">
               <Image
                 src="/assets/logo.svg"
                 width={100}
@@ -60,80 +62,21 @@ export default function MainHeader() {
               <div className="max-lg:hidden">
                 {/* <ThemeComponent /> */}
                 <div className="flex items-center space-x-4">
-                  <div className="flex items-center space-x-2 text-white">
-                    <span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        viewBox="0 0 24 24"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                        >
-                          <path
-                            strokeDasharray="64"
-                            strokeDashoffset="64"
-                            d="M8 3c0.5 0 2.5 4.5 2.5 5c0 1 -1.5 2 -2 3c-0.5 1 0.5 2 1.5 3c0.39 0.39 2 2 3 1.5c1 -0.5 2 -2 3 -2c0.5 0 5 2 5 2.5c0 2 -1.5 3.5 -3 4c-1.5 0.5 -2.5 0.5 -4.5 0c-2 -0.5 -3.5 -1 -6 -3.5c-2.5 -2.5 -3 -4 -3.5 -6c-0.5 -2 -0.5 -3 0 -4.5c0.5 -1.5 2 -3 4 -3Z"
-                          >
-                            <animate
-                              fill="freeze"
-                              attributeName="strokeDashoffset"
-                              dur="0.6s"
-                              values="64;0"
-                            />
-                            <animateTransform
-                              id="lineMdPhoneCallLoop0"
-                              fill="freeze"
-                              attributeName="transform"
-                              begin="0.6s;lineMdPhoneCallLoop0.begin+2.7s"
-                              dur="0.5s"
-                              type="rotate"
-                              values="0 12 12;15 12 12;0 12 12;-12 12 12;0 12 12;12 12 12;0 12 12;-15 12 12;0 12 12"
-                            />
-                          </path>
-                          <path
-                            strokeDasharray="4"
-                            strokeDashoffset="4"
-                            d="M15.76 8.28c-0.5 -0.51 -1.1 -0.93 -1.76 -1.24M15.76 8.28c0.49 0.49 0.9 1.08 1.2 1.72"
-                          >
-                            <animate
-                              fill="freeze"
-                              attributeName="strokeDashoffset"
-                              begin="lineMdPhoneCallLoop0.begin+0s"
-                              dur="2.7s"
-                              keyTimes="0;0.111;0.259;0.37;1"
-                              values="4;0;0;4;4"
-                            />
-                          </path>
-                          <path
-                            strokeDasharray="6"
-                            strokeDashoffset="6"
-                            d="M18.67 5.35c-1 -1 -2.26 -1.73 -3.67 -2.1M18.67 5.35c0.99 1 1.72 2.25 2.08 3.65"
-                          >
-                            <animate
-                              fill="freeze"
-                              attributeName="strokeDashoffset"
-                              begin="lineMdPhoneCallLoop0.begin+0.2s"
-                              dur="2.7s"
-                              keyTimes="0;0.074;0.185;0.333;0.444;1"
-                              values="6;6;0;0;6;6"
-                            />
-                          </path>
-                        </g>
-                      </svg>
-                    </span>
+                  <div className="flex items-center justify-center space-x-2 border border-[#F8AE3D] border-dashed rounded-full py-1 px-3">
+                    <Image
+                      src="/assets/bd-flag.png"
+                      width={25}
+                      height={25}
+                      alt="no image"
+                      color="white"
+                    />
                     <span>+880 17935033</span>
                   </div>
 
                   {/* Get a Quote Button */}
                   <Link
                     href="/contact"
-                    className=" bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg"
+                    className=" bg-blue-600 hover:bg-blue-700 font-semibold py-2 px-4 rounded-lg"
                   >
                     Get a Quote
                   </Link>

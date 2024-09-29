@@ -6,9 +6,24 @@
   margin: 0;
   width: 100%;
   z-index: 100;
-  background-color: #234077;
+  background-color: #fbb03b;
   transition: background-color 0.2s ease;
   color: white;
+  padding: 4px;
+}
+
+.stickyFirstShow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* padding: 10px 0px; */
+  margin: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #fbd293;
+  transition: background-color 0.2s ease;
+  /* color: white; */
+  padding: 4px;
 }
 
 /* .error {

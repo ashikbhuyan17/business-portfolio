@@ -21,7 +21,6 @@ body {
     url('/assets/software-developer-at-office.jpg') no-repeat center center;
 } */
 
-
 .elementor-section {
   background-image: url('/assets/theres-our-solution-.jpg');
   /* background-color: #01458a; */
@@ -31,7 +30,11 @@ body {
 
 .elementor-background-overlay {
   background-color: transparent;
-  background-image: linear-gradient(90deg, var(--e-global-color-4da9a17) 50%, #FFFFFF00 100%);
+  background-image: linear-gradient(
+    90deg,
+    var(--e-global-color-4da9a17) 50%,
+    #ffffff00 100%
+  );
   opacity: 0.9;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
